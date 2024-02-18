@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLink Job Listings</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .job-listing {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .job-listing h3 {
+            color: #c0392b;
+        }
+
+        footer {
+            background-color: #c0392b;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        #footer-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        #footer-links li {
+            margin: 0 15px;
+        }
+
+        #footer-links a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #footer-links a:hover {
+            color: #e96a5b;
+        }
+
+        #copyright {
+            display: block;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        #about,
+        #contact {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        #core-values {
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            animation: fadeInScale 1s ease-in-out;
+        }
+
+        #core-values h2 {
+            animation: colorChange 3s infinite;
+        }
+
+        #core-values strong {
+            color: #c0392b;
+        }
+
+        #csr-link {
+            display: block;
+            color: #e96a5b;
+            margin-top: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #csr-link:hover {
+            color: #fff;
+        }
+
+        #about strong {
+            color: #c0392b;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #333;
+            }
+            50% {
+                color: #e96a5b;
+            }
+            100% {
+                color: #333;
+            }
+        }
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            padding: 50px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .overlay:hover {
+            opacity: 1;
+        }
+
+        .animated-text {
+            color: #fff;
+            font-size: 1.5em;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+            font-family: 'Georgia', serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        nav {
+            background-color: #e15252; /* Light color for the navbar */
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav img {
+            height: 50px;
+            width: auto;
+            margin-right: auto; /* Align logo to the left */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fffefe; /* Text color for menu items */
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #e96a5b; /* Hover color for menu items */
+        }
+
+        /* Additional styling for responsive design */
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+
+            nav img {
+                margin: 0; /* Reset margin for logo on smaller screens */
+                margin-bottom: 10px; /* Add space below logo */
+            }
+        }
+
+
+        
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="https://images.yourstory.com/cs/images/companies/12097064850467581720046073579355104707893161n-1644325553864.jpg?fm=auto&ar=1:1&mode=fill&fill=solid&fill-color=fff" alt="iLink Logo">
+        <a href="https://www.ilink-digital.com/services/digital-experience-services/">Services</a>
+        <a href="https://www.ilink-digital.com/microsoft-partner/">Partnerships</a>
+        <a href="https://www.ilink-digital.com/indoor-asset-tracking/">Solutions</a>
+        <a href="https://www.ilink-digital.com/industries/financial-services-provider/">Industries</a>
+        <a href="https://www.ilink-digital.com/insights/blogs/">Insights</a>
+        <a href="https://www.ilink-digital.com/about-us/">About Us</a>
+        <a href="https://www.ilink-digital.com/careers/">Careers</a>
+      </nav>
+    <header>
+        <h1 style="font-size: 2.5em; margin-bottom: 10px; font-family: 'Georgia', serif;">Explore Exciting Opportunities at iLink</h1>
+        <p style="font-size: 1.2em; font-style: italic; margin-bottom: 20px;">Empowering Your Career Journey</p>
+        <img src="https://th.bing.com/th/id/OIP.uxtubpKB5dAowAkocljwQQHaCt?rs=1&pid=ImgDetMain" alt="Company Image">
+        <div class="overlay">
+            <div class="animated-text">We bring a client centric mindset to everything we do and value team work <br/>above all to achieve organizational goals.</div>
+        </div>
+    </header>
+    
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p><strong>Approach</strong><br>
+            We seek to understand your business and translate those needs and priorities into compelling digital experiences.
+        </p>
+        <p><strong>Vision</strong><br>
+            To be a trusted advisor for our customers and to help them achieve their business objectives by delivering high-quality technology solutions.
+        </p>
+        <p><strong>Outcomes</strong><br>
+            We help our clients navigate the lifecycle of digital transformation initiatives with a lean approach and focus on results.
+        </p>
+    </section>
+    <section id="core-values">
+        <h2>Core Values</h2>
+        <p>
+            <strong>Client Centric</strong> &rarr;
+            <strong>Innovative</strong> &rarr;
+            <strong>Proactive</strong> &rarr;
+            <strong>Honest</strong> &rarr;
+            <strong>Empathetic</strong> &rarr;
+            <strong>Reliable</strong>
+        </p>
+        <p>Corporate Social Responsibility is an integral part of our ethos – learn more about how we’re giving back here</p>
+    </section>
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@ilink.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+        <p>Address: 123 Main Street, City, Country</p>
+    </section>
+
+    <section>
+        <h2>Job Openings</h2>
+
+        <div class="job-listing">
+            <h3>QA Automation Engineer</h3>
+            <p>Location: Pune, Maharashtra</p>
+            <a href="qa.html">Apply</a>
+        </div>
+
+        <div class="job-listing">
+            <h3>Power BI Architect </h3>
+            <p>Location: Chicago, Illinois</p>
+            <a href="powerbi.html">Apply</a>
+        </div>
+
+        <div class="job-listing">
+            <h3>Environment Engineer</h3>
+            <p>Location: Chennai, Tamilnadu</p>
+            <a href="envi.html">Apply</a>
+        </div>
+
+        <div class="job-listing">
+            <h3>Full Stack Developer</h3>
+            <p>Location: Montreal East, Quebec</p>
+            <a href="full.html">Apply</a>
+        </div>
+    </section>
+
+    <footer>
+        <ul id="footer-links">
+            <li>
+                <a href="https://www.ilink-digital.com/#" target="_blank">
+                    Services
+                </a>
+            </li>
+            <li>
+                <a href="https://www.ilink-digital.com/contact/" target="_blank">
+                    Contact
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/user/ilinkinfo/featured" target="_blank">
+                    YouTube
+                </a>
+            </li>
+        </ul>
+        <span id="copyright">© 2024, iLink Digital</span>
+    </footer>
+
+</body>
+</html>
